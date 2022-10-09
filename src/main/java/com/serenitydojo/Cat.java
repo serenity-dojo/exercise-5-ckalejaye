@@ -1,22 +1,13 @@
 package com.serenitydojo;
 
-public class Cat {
-    private String name;
+public class Cat extends Pet{
     private String favoriteToy;
     private int age;
 
     public Cat(String name, String favoriteToy, int age) {
-        this.name = name;
+        super(name);
         this.favoriteToy = favoriteToy;
         this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getFavoriteToy() {

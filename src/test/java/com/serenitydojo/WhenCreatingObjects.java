@@ -16,6 +16,20 @@ public class WhenCreatingObjects {
     }
 
     @Test
+    public void creating_a_cat(){
+        Cat kitty = new Cat("kitty", "Laser Light", 3);
+        Assert.assertEquals(kitty.getName(), "kitty");
+        Assert.assertEquals(kitty.getFavoriteToy(),"Laser Light");
+        Assert.assertEquals(kitty.getAge(), 3 );
+    }
+    @Test
+    public void creating_a_hampster () {
+        Hamster fiz = new Hamster("Fiz", "Wheel");
+        Assert.assertEquals(fiz.getName(), "Fiz");
+        Assert.assertEquals(fiz.getFavouriteGame(), "Wheel");
+
+    }
+    @Test
     public void whenADogBarks() {
         Dog fido = new Dog("Fido","Bone", 5);
 
@@ -41,10 +55,10 @@ public class WhenCreatingObjects {
     public void whenAnimalsPlay() {
 // TODO: Uncomment me
 //
-//        Pet fido = new Dog("Fido","Bone", 5);
-//        Pet spot = new Cat("Spot","String", 5);
-//        Pet hazel = new Hamster("Hazel", 1, "Wheel");
-//
+          Pet fido = new Dog("Fido","Bone", 5);
+          Pet spot = new Cat("Spot","String", 5);
+          Pet hazel = new Hamster("Hazel", "Wheel");
+
 //        assertThat(fido.play(), equalTo("plays with bone"));
 //        assertThat(spot.play(), equalTo("plays with string"));
 //        assertThat(hazel.play(), equalTo("runs in wheel"));
