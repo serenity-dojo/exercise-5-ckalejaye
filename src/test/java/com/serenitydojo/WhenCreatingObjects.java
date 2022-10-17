@@ -26,7 +26,7 @@ public class WhenCreatingObjects {
     public void creating_a_hamster () {
         Hamster hazel = new Hamster("Hazel", "Wheel", 1);
         Assert.assertEquals(hazel.getName(), "Hazel");
-        Assert.assertEquals(hazel.getFavouriteGame(), "Wheel");
+        Assert.assertEquals(hazel.getFavoriteGame(), "Wheel");
         Assert.assertEquals(hazel.getAge(), 1);
     }
 

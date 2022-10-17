@@ -2,7 +2,7 @@ package com.serenitydojo;
 
 public class Hamster extends Pet{
 
-      private String favouriteGame;
+      private String favoriteGame;
       private int age;
 
     public static final String HAMSTER_NOISE = "Squeak";
@@ -11,12 +11,12 @@ public class Hamster extends Pet{
 
     public Hamster(String name, String favouriteGame, int age) {
         super(name);
-        this.favouriteGame = favouriteGame;
+        this.favoriteGame = favouriteGame;
         this.age = age;
     }
 
-    public String getFavouriteGame() {
-        return favouriteGame;
+    public String getFavoriteGame() {
+        return favoriteGame;
     }
 
     public int getAge(){
