@@ -1,26 +1,19 @@
 package com.serenitydojo;
 
-public class Dog {
-    private String name;
+public class Dog extends Pet {
     private String favoriteToy;
     private int age;
     private boolean isFed = false;
 
     public static final String DOG_NOISE = "Woof";
+    public static final String DOG_GAME = "Bone";
 
     public Dog(String name, String favoriteToy, int age) {
-        this.name = name;
+        super(name);
         this.favoriteToy = favoriteToy;
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getFavoriteToy() {
         return favoriteToy;
@@ -44,6 +37,9 @@ public class Dog {
 
     // Exercise 4
     public String makeNoise() {return DOG_NOISE;}
+    public String play(){
+        return DOG_GAME;
+    }
 
     public void feed() {
         this.isFed = true;
