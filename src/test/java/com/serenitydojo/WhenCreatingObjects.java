@@ -17,16 +17,29 @@ public class WhenCreatingObjects {
 
     @Test
     public void creating_a_cat(){
-        Cat kitty = new Cat("kitty", "Laser Light", 3);
+        Cat kitty = new Cat("kitty", "Laser Light", 4);
         Assert.assertEquals(kitty.getName(), "kitty");
         Assert.assertEquals(kitty.getFavoriteToy(),"Laser Light");
-        Assert.assertEquals(kitty.getAge(), 3 );
+        Assert.assertEquals(kitty.getAge(), 4);
     }
     @Test
-    public void creating_a_hampster () {
-        Hamster fiz = new Hamster("Fiz", "Wheel");
-        Assert.assertEquals(fiz.getName(), "Fiz");
-        Assert.assertEquals(fiz.getFavouriteGame(), "Wheel");
+    public void creating_a_hamster () {
+        Hamster hazel = new Hamster("Hazel", "Wheel", 1);
+        Assert.assertEquals(hazel.getName(), "Hazel");
+        Assert.assertEquals(hazel.getFavouriteGame(), "Wheel");
+        Assert.assertEquals(hazel.getAge(), 1);
+    }
+
+    @Test
+    public void cat_makeNoise( ){
+        Cat kitty = new Cat("Kitty", "String", 4);
+
+        String catSound = "";
+        catSound = kitty.makeNoise();
+
+        Assert.assertEquals(catSound, "Meow");
+
+//        System.out.println("Cat goes " + spot.makeNoise());
 
     }
     @Test
@@ -38,6 +51,16 @@ public class WhenCreatingObjects {
         dogSound = fido.makeNoise();
 
         Assert.assertEquals(dogSound, "Woof");
+    }
+
+    @Test
+    public void hamster_makeNoise(){
+        Hamster hazel = new Hamster("Hazel", "Wheel", 1);
+        String  hamsterSound = "";
+        hamsterSound = hazel.makeNoise();
+
+//        System.out.println(" Hamster goes " + hazel.makeNoise());
+
     }
 
     @Test
@@ -56,11 +79,34 @@ public class WhenCreatingObjects {
 // TODO: Uncomment me
 //
           Pet fido = new Dog("Fido","Bone", 5);
-          Pet spot = new Cat("Spot","String", 5);
-          Pet hazel = new Hamster("Hazel", "Wheel");
+          Pet kitty = new Cat("Kitty","String", 4);
+          Pet hazel = new Hamster("Hazel", "Wheel", 1);
 
-//        assertThat(fido.play(), equalTo("plays with bone"));
-//        assertThat(spot.play(), equalTo("plays with string"));
-//        assertThat(hazel.play(), equalTo("runs in wheel"));
+
+//        assertThat(fido.play(), equalTo("Play with Bone"));
+//        assertThat(kitty.play(), equalTo("Play with String"));
+//        assertThat(hazel.play(), equalTo("Play with Wheel"));
+    }
+
+    @Test
+    public void dog_play(){
+        Dog fido = new Dog("Fido", "Bone", 5);
+        String dogGame = "";
+        dogGame = fido.play();
+
+    }
+
+    @Test
+    public void cat_play() {
+        Cat kitty = new Cat("Kitty", "String", 4);
+        String catGame = "";
+        catGame = kitty.play();
+    }
+
+    @Test
+    public void hamster_play() {
+        Hamster hazel = new Hamster("Hazel", "Wheel", 1);
+        String hamsterGame = "";
+        hamsterGame = hazel.play();
     }
 }

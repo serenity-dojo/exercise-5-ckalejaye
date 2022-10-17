@@ -6,6 +6,7 @@ public class Dog extends Pet {
     private boolean isFed = false;
 
     public static final String DOG_NOISE = "Woof";
+    public static final String DOG_GAME = "Bone";
 
     public Dog(String name, String favoriteToy, int age) {
         super(name);
@@ -36,6 +37,9 @@ public class Dog extends Pet {
 
     // Exercise 4
     public String makeNoise() {return DOG_NOISE;}
+    public String play(){
+        return DOG_GAME;
+    }
 
     public void feed() {
         this.isFed = true;
